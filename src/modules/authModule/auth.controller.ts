@@ -3,7 +3,7 @@ import { Body, Controller, Post, UseGuards, Request } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { SignUpDto } from './dto/signUp.dto';
 import { LocalAuthGuard } from './guards/localAuth.guard';
-import { TToken, TUser } from '../../shared/types';
+import { TToken, TUser } from 'src/shared/types';
 
 @Controller()
 export class AuthController {

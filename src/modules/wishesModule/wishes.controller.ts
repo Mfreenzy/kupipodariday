@@ -14,7 +14,7 @@ import { WishesService } from './wishes.service';
 import { CreateWishDto } from './dto/createWish.dto';
 import { JwtAuthGuard } from '../authModule/guards/jwtAuth.guard';
 import { UpdateWishDto } from './dto/updateWish.dto';
-import { TUserRequest } from '../../shared/types';
+import { TUserRequest } from 'src/shared/types';
 import { Wish } from './entities/wish.entity';
 
 @Controller('wishes')

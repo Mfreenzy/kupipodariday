@@ -10,7 +10,7 @@ import { WishesModule } from '../wishesModule/wishes.module';
 import { WishlistsModule } from '../wishlistModule/wishlist.module';
 import { OffersModule } from '../offersModule/offers.module';
 import { AuthModule } from '../authModule/auth.module';
-import { loggerConfig } from '../../configFiles/logger.config';
+import { loggerConfig } from 'src/configFiles/logger.config';
 import { HashModule } from '../hashModule/hash.module';
 
 @Module({

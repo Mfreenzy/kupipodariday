@@ -4,7 +4,7 @@ import { Offer } from "src/modules/OffersModule/entities/offer.entity";
 import { Wishlist } from "src/modules/wishlistModule/entities/wishlist.entity";
 
 export const config = () => ({
-  port: parseInt(process.env.PORT),
+  port: Number(process.env.PORT),
   jwtSecret: process.env.JWT_SECRET,
   jwtExp: process.env.JWT_EXP,
   database: {
@@ -14,8 +14,9 @@ export const config = () => ({
     username: process.env.DB_USERNAME,
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
-    entities: [User, Wish, Offer, Wishlist],
-    // synchronize: true,
-    logging: true,
+    entities: [__dirname + '/../**/*.entity.{js,ts}'],
+    // entities: [User, Wish, Offer, Wishlist],
+    synchronize: true,
+    logging: false,
   },
 });

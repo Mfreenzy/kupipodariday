@@ -5,7 +5,7 @@ import { sharedScheme } from '../../../shared/sharedScheme';
 import { User } from '../../usersModule/entities/user.entity';
 import { Wish } from '../../../modules/wishesModule/entities/wish.entity';
 
-@Entity()
+@Entity('offer')
 export class Offer extends sharedScheme {
   @Column()
   @IsNumber({

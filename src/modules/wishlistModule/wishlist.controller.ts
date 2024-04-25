@@ -15,7 +15,7 @@ import { CreateWishlistDto } from './dto/createWishlist.dto';
 import { JwtAuthGuard } from '../authModule/guards/jwtAuth.guard';
 import { UpdateWishlistDto } from './dto/updateWishlist.dto';
 import { Wishlist } from './entities/wishlist.entity';
-import { TUserRequest } from '../../shared/types';
+import { TUserRequest } from 'src/shared/types';
 
 @UseGuards(JwtAuthGuard)
 @Controller('wishlistlists')

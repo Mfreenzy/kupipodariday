@@ -6,7 +6,7 @@ import { Wish } from '../../wishesModule/entities/wish.entity';
 import { Offer } from '../../offersModule/entities/offer.entity';
 import { Wishlist } from '../../wishlistModule/entities/wishlist.entity';
 
-@Entity()
+@Entity('user')
 export class User extends sharedScheme {
   @Column({ unique: true })
   @Length(2, 30)
@@ -30,7 +30,7 @@ export class User extends sharedScheme {
   @OneToMany(() => Wish, (wish) => wish.owner)
   wishes: Wish[];
 
-  @OneToMany(() => Offer, (offer) => offer.user)
+  @OneToMany(() => Offer, (offer) => offer.user) // Указываем связь с сущностью Offer
   offers: Offer[];
 
   @OneToMany(() => Wishlist, (wishlist) => wishlist.owner)

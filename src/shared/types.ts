@@ -1,4 +1,4 @@
-import { User } from '../modules/usersModule/entities/user.entity';
+import { User } from 'src/modules/usersModule/entities/user.entity';
 
 export type TUser = Omit<User, 'password'>;
 
